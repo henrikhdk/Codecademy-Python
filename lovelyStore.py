@@ -1,6 +1,6 @@
 # This is a project of a small-business ownership and open up a furniture store called Lovely Loveseats
 
-# A nice ASCII Art for the initialize the terminal.
+# A nice ASCII Art to initialize the terminal.
 wellcome ="""
 
       __        ___                   __        ___  __   ___      ___  __  
@@ -26,21 +26,23 @@ Luxurious Lamp. Glass and iron. 36 inches tall. Brown with cream shade.
 luxurious_lamp_price = 52.15
 
 # The var for the 8.8% sales tax
-sales_tax = .088
+sales_tax = 0.088
 
-# Our First Customer
+# Our First customer - Chart initialisation
 customer_one_total = 0
 customer_one_itemization = ""
 
-# Customer cart
+# First customer Cart
 customer_one_total += lovely_loveseat_price + luxurious_lamp_price
 customer_one_itemization += lovely_loveseat_description + luxurious_lamp_description
 
+# Customer - Checkout
 customer_one_tax = customer_one_total * sales_tax
-
 customer_one_total += customer_one_tax
 
+# Final receipt
+print(wellcome)
 print("Customer One Items:")
 print(customer_one_itemization)
 print("Customer One Total:")
-print(customer_one_total)
+print("%.2f" % customer_one_total)
