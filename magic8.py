@@ -1,15 +1,15 @@
-# Importa the random Lib to generate a magic 8 ball number
+# Generating a random number Lib to generate a Magic 8 Ball number
 import random
 
-name = "Henrik"
-#name = input("Hi, what's your name? ")
-question = "Should I have breakfast?"
+# Ask the user a name and the question
+name = input("What's your name? ")
+question = input("Type your question get answer: ")
+print("")
 
 answer = ""
 
+# Pseudorandom number generator (PRNG) from a range of 1-20
 random_number = random.randint(1, 20)
-
-#print(random_number)
 
 # 10 affirmative answers
 if random_number == 1:
@@ -59,5 +59,12 @@ elif random_number == 20:
 else:
   answer = "Error"
 
-print(name, "asks:", question)
-print("Magic 8-Ball's answer:", answer)
+# Error handling in case of string from question and name is empty
+if question == "":
+  print("Hey! Ask me a question or I will not speak your future.")
+else:
+  if name == "":
+    print("Question:", question)
+  else:
+    print(name, "asks:", question)
+  print("Magic 8-Ball's answer:", answer)
